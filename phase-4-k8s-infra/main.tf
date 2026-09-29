@@ -60,7 +60,7 @@ resource "azurerm_postgresql_flexible_server" "n8n_db" {
   zone                = "2"
 
   administrator_login    = "n8nadmin"
-  administrator_password = "n8n-password-123"
+  administrator_password = var.administrator_password
 
   sku_name   = "B_Standard_B1ms"
   storage_mb = 32768
